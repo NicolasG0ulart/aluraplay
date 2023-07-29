@@ -1,12 +1,12 @@
 async function listaVideos() {
-    const conexao = await fetch("http://localhost:3000/videos");
+    const conexao = await fetch("https://glistening-kheer-7cb8f2.netlify.app/videos");
     const conexaoConvertida = await conexao.json();
 
     return conexaoConvertida;
 }
 
 async function criaVideo(titulo, descricao, url, imagem) {
-    const conexao = await fetch("http://localhost:3000/videos", {
+    const conexao = await fetch("https://glistening-kheer-7cb8f2.netlify.app/videos", {
         method: "POST",
         headers: {
             "Content-type": "application/json"
